@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Student Login</h2>
+<form method="POST" id="loginForm">
+    <div class="mb-3">
+        <label>Student ID</label>
+        <input type="text" name="student_id" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Student Dashboard</h2>
+<p><strong>Student ID:</strong> {{ student.student_id }}</p>
+<p><strong>Enrollment Date:</strong> {{ student.enrollment_date }}</p>
+<p><strong>Graduation Date:</strong> {{ student.graduation_date }}</p>
+<p><strong>Class:</strong> {{ student.class_name }}</p>
+<p><strong>Department:</strong> {{ student.department }}</p>
+<h3>Semesters</h3>
+{% for semester in semesters %}
+<div class="card mb-3">
+    <div class="card-body">
+        <h5>{{ semester.semester_name }} ({{ semester.start_date }} - {{ semester.end_date }})</h5>
+        <ul>
+            {% for course in semester.courses %}
+            <li>{{ course.course_name }} - Result: {{ course.result }}, Attendance: {{ course.attendance }}%, Instructor: {{ course.instructor }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

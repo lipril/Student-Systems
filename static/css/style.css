@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+.navbar {
+    margin-bottom: 20px;
+}
+.container {
+    max-width: 1200px;
+}
+.table th, .table td {
+    vertical-align: middle;
+}
+.card {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+#video {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+.btn {
+    margin-right: 10px;
+}

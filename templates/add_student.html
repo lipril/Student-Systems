@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Add New Student</h2>
+<form method="POST" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+    <div class="mb-3">
+        {{ form.student_id.label(class="form-label") }}
+        {{ form.student_id(class="form-control") }}
+        {% if form.student_id.errors %}
+            <div class="text-danger">
+                {% for error in form.student_id.errors %}{{ error }}{% endfor %}
+            </div>
+        {% endif %}
+    </div>
+    <div class="mb-3">
+        {{ form.enrollment_date.label(class="form-label") }}
+        {{ form.enrollment_date(class="form-control") }}
+        {% if form.enrollment_date.errors %}
+            <div class="text-danger">
+                {% for error in form.enrollment_date.errors %}{{ error }}{% endfor %}
+            </div>
+        {% endif %}
+    </div>
+    <div class="mb-3">
+        {{ form.graduation_date.label(class="form-label") }}
+        {{ form.graduation_date(class="form-control") }}
+        {% if form.graduation_date.errors %}
+            <div class="text-danger">
+                {% for error in form.graduation_date.errors %}{{ error }}{% endfor %}
+            </div>
+        {% endif %}
+    </div>
+    <div class="mb-3">
+        {{ form.class_name.label(class="form-label") }}
+        {{ form.class_name(class="form-control") }}
+        {% if form.class_name.errors %}
+            <div class="text-danger">
+                {% for error in form.class_name.errors %}{{ error }}{% endfor %}
+            </div>
+        {% endif %}
+    </div>
+    <div class="mb-
